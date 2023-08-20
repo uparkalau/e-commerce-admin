@@ -1,0 +1,41 @@
+{
+    "name": "e-commerce-admin",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "test": "jest"
+    },
+    "dependencies": {
+        "@auth/mongodb-adapter": "^1.0.0",
+        "autoprefixer": "10.4.14",
+        "axios": "^1.4.0",
+        "eslint": "8.46.0",
+        "eslint-config-next": "13.4.13",
+        "mongodb": "^5.7.0",
+        "mongoose": "^7.4.3",
+        "next": "13.4.13",
+        "next-auth": "^4.23.1",
+        "postcss": "8.4.27",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-sortablejs": "^6.1.4",
+        "react-spinners": "^0.13.8",
+        "tailwindcss": "3.3.3"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.22.10",
+        "@babel/preset-react": "^7.22.5",
+        "@testing-library/jest-dom": "^6.0.1",
+        "@testing-library/react": "^14.0.0",
+        "@testing-library/user-event": "^14.4.3",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-jest": "^29.6.2",
+        "jest": "^29.6.2",
+        "jest-environment-jsdom": "^29.6.2",
+        "prettier": "3.0.2"
+    }
+}
