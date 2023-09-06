@@ -22,7 +22,7 @@ export default async function handle(req, res) {
             title,
             description,
             price,
-            // images,
+            images,
             // category,
             properties,
         })

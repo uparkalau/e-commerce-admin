@@ -56,6 +56,21 @@ function ProductForm({
     function uploadImages(newImages) {
         setImages((oldImages) => [...oldImages, ...newImages])
     }
+    // async function uploadImages(ev) {
+    //     const files = ev.target?.files
+    //     if (files?.length > 0) {
+    //         setIsUploading(true)
+    //         const data = new FormData()
+    //         for (const file of files) {
+    //             data.append('file', file)
+    //         }
+    //         const res = await axios.post('/api/upload', data)
+    //         setImages((oldImages) => {
+    //             return [...oldImages, ...res.data.links]
+    //         })
+    //         setIsUploading(false)
+    //     }
+    // }
 
     if (goToProducts) {
         router.push('/products')
@@ -105,7 +120,7 @@ function ProductForm({
             {propertiesToFill.map((p) => (
                 <div key={p.name}>
                     <label>
-                        {p.name[0].toUpperCase() + p.name.substring(1)}
+                        {p.name[0]?.toUpperCase() + p.name.substring(1)}
                     </label>
                     <PropertySelector
                         property={productProperties[p.name]}
@@ -115,7 +130,7 @@ function ProductForm({
                 </div>
             ))}
 
-            {/* <ImageUpload images={images} onUpload={uploadImages} updateImagesOrder={updateImagesOrder} /> */}
+            <ImageUpload images={images} onUpload={uploadImages} updateImagesOrder={updateImagesOrder} />
             <label>Description</label>
             <textarea
                 placeholder="description"
